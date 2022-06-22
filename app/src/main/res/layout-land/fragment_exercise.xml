@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ExerciseFragment">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginTop="@dimen/common_margin2"
+        android:layout_marginEnd="@dimen/common_margin2"
+        android:gravity="center"
+        android:text="@string/exercise"
+        android:textSize="@dimen/common_txt_40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginTop="@dimen/common_margin2"
+        android:layout_marginEnd="@dimen/common_margin2"
+        android:gravity="center"
+        android:textSize="@dimen/common_txt_50sp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/txtTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginTop="@dimen/common_margin2"
+        android:layout_marginEnd="@dimen/common_margin2"
+        android:gravity="center"
+        android:scrollbars="none"
+        android:textSize="@dimen/common_txt_60sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtQuantity" />
+
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_margin"
+        android:layout_marginBottom="@dimen/common_margin"
+        android:text="@string/done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnPauseTime" />
+
+    <Button
+        android:id="@+id/btnPauseTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin2"
+        android:text="@string/pause"
+        app:layout_constraintBottom_toTopOf="@+id/btnDone"
+        app:layout_constraintEnd_toEndOf="@+id/btnDone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnDone"
+        app:layout_constraintTop_toBottomOf="@+id/btnResetTime" />
+
+    <Button
+        android:id="@+id/btnResetTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/common_margin2"
+        android:text="@string/reset_timer"
+        app:layout_constraintBottom_toTopOf="@+id/btnPauseTime"
+        app:layout_constraintEnd_toEndOf="@+id/btnDone"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/btnDone"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+</androidx.constraintlayout.widget.ConstraintLayout>

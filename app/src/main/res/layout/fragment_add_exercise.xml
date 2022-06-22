@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.AddExerciseFragment">
+
+    <EditText
+        android:id="@+id/etExerciseName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginEnd="@dimen/common_margin2"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/exercise_name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.029" />
+
+    <NumberPicker
+        android:id="@+id/ExerciseTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginTop="@dimen/common_margin2"
+        android:scaleX="0.75"
+        android:scaleY="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseName" />
+
+    <EditText
+        android:id="@+id/etExerciseQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin2"
+        android:layout_marginTop="@dimen/common_margin2"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/how_many_times"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ExerciseTimePicker" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/common_margin3"
+        android:text="@string/seconds"
+        app:layout_constraintBottom_toTopOf="@+id/etExerciseQuantity"
+        app:layout_constraintStart_toEndOf="@+id/ExerciseTimePicker"
+        app:layout_constraintTop_toBottomOf="@+id/etExerciseName"
+        app:layout_constraintVertical_bias="0.475" />
+
+    <Button
+        android:id="@+id/btnNewExercise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/common_margin2"
+        android:layout_marginBottom="@dimen/common_margin2"
+        android:text="@string/done"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="UsingOnClickInXml" />
+</androidx.constraintlayout.widget.ConstraintLayout>

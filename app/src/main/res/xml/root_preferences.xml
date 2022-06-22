@@ -1,0 +1,68 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    <PreferenceCategory-->
+<!--        app:title="@string/pref_notifications_title"-->
+<!--        app:icon="@drawable/ic_baseline_notifications_24">-->
+
+<!--        <SwitchPreferenceCompat-->
+<!--            app:key="notifications"-->
+<!--            app:title="@string/pref_notifications"-->
+<!--            android:defaultValue="false" />-->
+
+<!--    </PreferenceCategory>-->
+
+    <PreferenceCategory
+        app:title="@string/pref_BMI_title"
+        app:icon="@drawable/ic_baseline_info_24" >
+
+        <SwitchPreferenceCompat
+            app:key="@string/pref_key_units"
+            app:title="@string/pref_units"
+            app:summaryOn="@string/pref_units_on"
+            android:summaryOff="@string/pref_units_off"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        app:title="@string/pref_theme_title"
+        android:icon="@drawable/ic_dark_mode">
+
+        <SwitchPreferenceCompat
+            android:key="@string/pref_key_theme"
+            app:summaryOn="@string/pref_theme_on"
+            android:summaryOff="@string/pref_theme_off"
+            android:defaultValue="false"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_title_language"
+        android:icon="@drawable/ic_language">
+
+        <ListPreference
+            android:defaultValue="en"
+            android:entries="@array/Language_names"
+            android:entryValues="@array/Language_values"
+            android:key="@string/pref_key_language"
+            android:title="@string/change_language" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        app:title="@string/pref_clear_title"
+        android:icon="@drawable/ic_delete">
+
+        <com.example.workoutappgroupproject.dialog.CustomDialogPreference
+            android:key="@string/pref_key_clear"
+            app:title="@string/pref_clear"
+            android:dialogMessage="@string/pref_clear_ask"
+            android:positiveButtonText="@string/pref_clear_yes"
+            android:negativeButtonText="@string/pref_clear_no"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
+
